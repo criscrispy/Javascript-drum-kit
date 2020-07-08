@@ -102,7 +102,7 @@ kbd {
 	border-radius: 3px;
 	width: 250px;
 	// clip-path: circle(12% at 85% 30%);
-	clip-path: circle(10% at 79% 22%);
+	clip-path: circle(11% at 80% 20%);
 	transition: all 0.5s ease-in-out;
 
 	&:hover {
@@ -119,6 +119,11 @@ kbd {
 		color: white;
 		font-size: 1.5rem;
 		// margin-top: 30px;
+	}
+
+	p.bg-photo {
+		color: white;
+		font-size: 1rem;
 	}
 
 	span {

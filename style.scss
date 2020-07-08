@@ -1,0 +1,142 @@
+$colors: (color-1 : red, color-2 : blue, color-3 : yellow, color-4 : green, color-5 : purple);
+
+// $newValueofColors:();
+
+/* @function colorPicker($newValueofColors) {
+	$list: ();
+	@each $color in $colors {
+		$newValueofColors: append($list, $color);
+	}
+	// @each $idx in
+	$idx: math.floor(math.random()*length($newValueofColors));
+	@return nth($newValueofColor, $idx);
+} */
+
+// @for $color from 1 to $colors {
+
+// }
+
+// @function colorPicker($color-name) {
+// 		$valuesOfcolors : [];
+// 		@for $value from $colors {
+// 		$valuesOfcolors.push($colors[$value]);
+// }
+// 	@return map-get($colors, $color-name);
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+html {
+	font-size: 10px;
+	background: url(Drumming.jpg) center no-repeat;
+	background-size: cover;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
+}
+
+body {
+	min-height: 100vh;
+}
+
+.keys {
+	display: flex;
+	flex: 1;
+	min-height: 85vh;
+	align-items: center;
+	justify-content: center;
+}
+.key {
+	border: .4rem solid black;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all 0.07s ease;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 .5rem black;
+}
+.playing {
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+.sound {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: #ffc600;
+}
+
+// .outer-info-div {
+// 	display: flex;
+// 	color: white;
+// 	background-color: #00b6ff;
+// 	border-radius: 3px;
+// 	position: absolute;
+// 	bottom: 30px;
+// 	right: 30px;
+// 	clip-path: circle(20% at 0% 0%);
+// 	transition: clip-path .5 ease-in-out;
+// }
+
+.inner-info-div {
+	background: rgba(0, 182, 255, 0.8);
+	border-radius: 3px;
+	position: absolute;
+	bottom: 50px;
+	right: 30px;
+	padding: 1em;
+	border-radius: 3px;
+	width: 250px;
+	// clip-path: circle(12% at 85% 30%);
+	clip-path: circle(10% at 79% 22%);
+	transition: all 0.5s ease-in-out;
+
+	&:hover {
+		clip-path: circle(75%);
+		background: rgba(0, 182, 255, 0.4);
+	}
+
+	h2 {
+		color: white;
+		// margin: 0;
+	}
+
+	p {
+		color: white;
+		font-size: 1.5rem;
+		// margin-top: 30px;
+	}
+
+	span {
+		float: right;
+		// left: 7px;
+		opacity: 1;
+		color: white;
+		display: block;
+		font-weight: bold;
+		font-size: 1.5rem;
+		transition: opacity 1s ease-in-out;
+		position: relative;
+		margin-right: 10%;
+		cursor: auto;
+	}
+	&:hover span {
+		// cursor: none;
+		transition: opacity 1s ease-in-out;
+		opacity: 0;
+	}
+}
